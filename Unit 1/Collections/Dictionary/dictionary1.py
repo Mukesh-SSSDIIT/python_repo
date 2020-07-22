@@ -186,3 +186,35 @@ for k,v in myfamily.items():
     #print(v["Age"])
     for ck,cv in v.items():
         print(ck,cv)
+
+# Nested dictionary
+child1 = {
+       'name':"Mr.A",
+       'Age':19 
+}
+child2 = {
+       'name':"Mr.B",
+       'Age':25
+}
+child3 = {
+       'name':"Mr.C",
+       'Age':18 
+}
+
+myfamily = {
+    "child1":child1,
+    "child2":child2,
+    "child3":child3,
+}
+print(myfamily)
+for k,v in myfamily.items():
+    print(k)
+    for ck,cv in v.items():
+        print(ck,cv)
+    
+# Declare dictionary using dict() constructor
+student = dict(rno=12,nm='aaaa',city='jnd')
+print (student)
+print (type(student))
+for k,v in student.items():
+    print(k,v)
