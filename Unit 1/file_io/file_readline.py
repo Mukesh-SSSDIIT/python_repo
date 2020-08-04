@@ -11,7 +11,7 @@
 #     print(txt)
 # fp.close()
 
-fp = open("myfile1.txt","r")
+fp = open("myfile.txt","r")
 for line in fp:
     print(line)
 fp.close()

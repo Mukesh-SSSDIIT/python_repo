@@ -1,0 +1,1 @@
+print("Valid input")
