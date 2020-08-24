@@ -47,5 +47,36 @@ print(s1.encode())
 s1 = "What is your name? My name is Rakesh."
 print(s1.endswith("?"))
 
+# The expandtabs() method sets the tab size to the specified number of whitespaces.
+s1 = "i\tn\td\ti\ta"
+print(s1.expandtabs(5))
 
+# The find() method finds the first occurrence of the specified value.
+# The find() method returns -1 if the value is not found.
+# The find() method is almost the same as the index() method, the only difference is that the index() method raises an exception if the value is not found.
+
+s1 = "India is great country in the world. great people leaves here"
+print(s1.find("great",10,42))
+
+# Another Example of find()
+s1 = "India is great country in the world. great people leaves here"
+searchstring = "great"
+start = s1.find(searchstring,10,42)
+end = start + len(searchstring)
+print(start,end)
+print(s1[start:end])
+
+# The format() method formats the specified value(s) and insert them inside the string's placeholder.
+# The placeholder is defined using curly brackets: {}. Read more about the placeholders in the Placeholder section below.
+# The format() method returns the formatted string.
+
+#named indexes:
+txt = "My name is {fname}, I'm {age}"
+txt1 = txt.format(fname = "Aakash", age = 36)
+txt2 = txt.format(fname = "Shiv", age = 42)
+txt3 = txt.format(fname = "Aman", age = 48)
+print(txt)
+print(txt1)
+print(txt2)
+print(txt3)
 
