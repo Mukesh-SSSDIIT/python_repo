@@ -71,7 +71,7 @@ print(s1[start:end])
 # The format() method returns the formatted string.
 
 #named indexes:
-txt = "My name is {fname}, I'm {age}"
+txt = "My name is {fname}, I'm {age} year old."
 txt1 = txt.format(fname = "Aakash", age = 36)
 txt2 = txt.format(fname = "Shiv", age = 42)
 txt3 = txt.format(fname = "Aman", age = 48)
@@ -79,4 +79,35 @@ print(txt)
 print(txt1)
 print(txt2)
 print(txt3)
+
+#numbered indexes:
+txt = "My name is {0}, I'm {1} year old. Hi {0}, you are {1} year old"
+txt1 = txt.format("Aakash",36)
+print(txt1)
+
+#empty placeholder:
+txt = "My name is {}, I'm {} year old. Hi {}"
+txt1 = txt.format("Aakash",36, "Shiv")
+print(txt1)
+
+#Inside the placeholders you can add a formatting type to format the result:
+# :<	Left aligns the result (within the available space)
+# :>	Right aligns the result (within the available space)
+# :^	Center aligns the result (within the available space)
+# :=	Places the sign to the left most position
+# :+	Use a plus sign to indicate if the result is positive or negative
+# : 	Use a space to insert an extra space before positive numbers (and a minus sign befor negative numbers)
+# :,	Use a comma as a thousand separator
+# :_	Use a underscore as a thousand separator
+# :b	Binary format
+# :c	Converts the value into the corresponding unicode character (ASCII Value)
+# :d	Decimal format
+# :e	Scientific format, with a lower case e
+# :E	Scientific format, with a lower case E
+# :f	Fix point number format
+
+
+
+txt = "i love {:^15} India is my country"
+print(txt.format("India"))
 
