@@ -105,9 +105,111 @@ print(txt1)
 # :e	Scientific format, with a lower case e
 # :E	Scientific format, with a lower case E
 # :f	Fix point number format
-
-
+# :o	Octal format
+# :x	Hex format, lower case
+# :X	Hex format, upper case
+# :n	Number format
+# :%	Percentage format
 
 txt = "i love {:^15} India is my country"
 print(txt.format("India"))
+
+
+# index() - Searches the string for a specified value and returns the position of where it was found
+# if string is not found in the main string then this method will raise an error.
+
+txt = "Hello, welcome to my world."
+x = txt.index("to")
+print(x)
+
+# isalnum()	Returns True if all characters in the string are alphanumeric
+txt = "Compa4&52AAaaany12"
+x = txt.isalnum()
+print(x)
+
+# isalpha()	Returns True if all characters in the string are in the alphabet
+txt = "Company"
+x = txt.isalpha()
+print(x)
+
+# The isdecimal() method returns True if all the characters are decimals (0-9).
+# This method is used on unicode objects.
+txt = "\u0039"
+print(txt)
+x = txt.isdecimal()
+print(x)
+
+# The isdigit() method returns True if all the characters are digits, otherwise False.
+# Exponents, like ², are also considered to be a digit.
+txt = "12\u00B3"
+print(txt)
+x = txt.isdigit()
+print(x)
+
+# The isidentifier() method returns True if the string is a valid identifier, 
+# otherwise False.
+# A string is considered a valid identifier if it only contains alphanumeric letters (a-z) 
+# and (0-9), or underscores (_). A valid identifier cannot start with a number, 
+# or contain any spaces.
+txt = "ABC_123"
+x = txt.isidentifier()
+print(x)
+
+# The islower() method returns True if all the characters are in lower case, 
+# otherwise False.
+# Numbers, symbols and spaces are not checked, only alphabet characters.
+txt = "abc_123"
+x = txt.islower()
+print(x)
+
+# The isupper() method returns True if all the characters are in upper case, 
+# otherwise False.
+# Numbers, symbols and spaces are not checked, only alphabet characters.
+txt = "ABC_123"
+x = txt.isupper()
+print(x)
+
+# The istitle() method returns True if all words in a text start with a 
+# upper case letter, AND the rest of the word are lower case letters, otherwise False.
+# Symbols and numbers are ignored.
+txt = "Hello Friends How Are You"
+x = txt.istitle()
+print(x)
+
+# The isnumeric() method returns True if all the characters are numeric (0-9), 
+# otherwise False.
+# Exponents, like ² and ¾ are also considered to be numeric values.
+txt = "1234"
+x = txt.isnumeric()
+print(x)
+
+# The isprintable() method returns True if all the characters are printable, 
+# otherwise False.
+# Example of none printable character can be carriage return and line feed.
+txt = "ABC\t1234"
+print(txt)
+x = txt.isprintable()
+print(x)
+
+# The isspace() method returns True if all the characters in a string are whitespaces, 
+# otherwise False.
+txt = "   "
+x = txt.isspace()
+print(x)
+
+# The join() method takes all items in an iterable and joins them into one string.
+# A string must be specified as the separator.
+myValues= ["John", "Peter", "Vicky"]
+myseparator = "-"
+x = myseparator.join(myValues)
+print(x)
+
+myValues= ["John", "Peter", "Vicky"]
+x = "-".join(myValues)
+print(x)
+
+# The ljust() method will left align the string, using a specified character (space is default) as the fill character.
+txt = "banana"
+x = txt.ljust(20)
+print(x, "is my favorite fruit.")
 
