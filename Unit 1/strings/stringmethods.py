@@ -213,3 +213,88 @@ txt = "banana"
 x = txt.ljust(20)
 print(x, "is my favorite fruit.")
 
+# lower()	Converts a string into lower case
+txt = "APPle"
+x = txt.lower()
+print(x)
+
+# The lstrip() method removes any leading characters (space is the default leading character to remove)
+txt = "------banana     "
+x = txt.lstrip('-')
+print("of all fruits", x, "is my favorite")
+
+# The rstrip() method removes any trailing characters (characters at the end a string), space is the default trailing character to remove.
+txt = "       banana------"
+x = txt.rstrip('-')
+print("of all fruits", x, "is my favorite")
+
+# The strip() method removes any leading (spaces at the beginning) and trailing (spaces at the end) characters (space is the default leading character to remove)
+txt = "-------banana------"
+x = txt.strip("-")
+print("of all fruits", x, "is my favorite")
+
+# The maketrans() method returns a mapping table that can be used with the translate() method to replace specified characters.
+txt = "Hello Sam!"
+mytable = txt.maketrans("HmSa", "CeJo",'l')
+print(txt.translate(mytable))
+
+# The partition() method searches for a specified string, and splits the string into a tuple containing three elements.
+# The first element contains the part before the specified string.
+# The second element contains the specified string.
+# The third element contains the part after the string.
+txt = "Rajesh-Shiv"
+x = txt.partition("-")
+print(x)
+
+# The replace() method replaces a specified phrase with another specified phrase.
+# All occurrences of the specified phrase will be replaced, if nothing else is specified.
+txt = "one one was a race horse, two two was one too."
+x = txt.replace("one", "three",2)
+print(x)
+
+# The rfind() method finds the last occurrence of the specified value.
+# The rfind() method returns -1 if the value is not found.
+# The rfind() method is almost the same as the rindex() method.
+
+txt = "Mi casa, su casa."
+x = txt.rfind("casa",0,10)
+print(x)
+
+# The rjust() method will right align the string, using a specified character (space is default) as the fill character.
+txt = "banana"
+x = txt.rjust(20)
+print("Hello, ",x, "is my favorite fruit.")
+
+# The rpartition() method searches for the last occurrence of a specified string, and splits the string into a tuple containing three elements.
+# The first element contains the part before the specified string.
+# The second element contains the specified string.
+# The third element contains the part after the string.
+txt = "I could eat bananas all day, bananas are my favorite fruit"
+x = txt.rpartition("bananas")
+print(x)
+
+# The rsplit() method splits a string into a list, starting from the right.
+# If no "max" is specified, this method will return the same as the split() method.
+txt = "apple, banana, cherry"
+x = txt.rsplit(", ",1)
+print(x)
+
+# The splitlines() method splits a string into a list. The splitting is done at line breaks.
+txt = "Thank you for the music\nWelcome to\nthe jungle"
+x = txt.splitlines()
+print(x)
+
+# The startswith() method returns True if the string starts with the specified value, otherwise False.
+txt = "Hello, welcome to my world."
+x = txt.startswith("welcome")
+print(x)
+
+# The swapcase() method returns a string where all the upper case letters are lower case and vice versa.
+txt = "Hello My Name Is PETER"
+x = txt.swapcase()
+print(x)
+
+# The zfill() method adds zeros (0) at the beginning of the string, until it reaches the specified length.
+txt = "512"
+x = txt.zfill(5)
+print(x)
