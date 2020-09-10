@@ -8,8 +8,11 @@ class Test:
     def sum(self,a,b,c):
         return a + b + c
 
+    def sum(self,a):
+        return a;
+
 test = Test()
-#ans = test.sum(5,10)
-ans = test.sum(5,10,20)
+ans = test.sum(5)
+#ans = test.sum(5,10,20)
 print(ans)
 

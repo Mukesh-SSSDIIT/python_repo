@@ -22,7 +22,7 @@ def add(datatype, *args):
 	print(answer) 
 
 # Integer 
+add('int', 5, 6,7,8) 
 add('int', 5, 6) 
-
 # String 
 add('str', 'Hi ', 'Geeks') 
