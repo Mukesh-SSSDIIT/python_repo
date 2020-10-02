@@ -11,6 +11,10 @@ print(result)
 result = re.findall("[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-..]+",data)
 print(result)
 
-
-
-
+import re
+txt = "I love my India, India is my country, You also love India"
+obj = re.compile("india",re.IGNORECASE)
+lst = obj.findall(txt)
+lst1 = obj.findall("India is great")
+print(lst)
+print(lst1)
