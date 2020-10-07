@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <rollno>1</rollno>
+        <name>Rajesh</name>
+        <city>Junagadh</city>
+    <student>
+    <student>
+        <rollno>2</rollno>
+        <name>Ramesh</name>
+        <city>Rajkot</city>
+    <student>
+</students>
