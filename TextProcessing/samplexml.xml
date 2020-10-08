@@ -4,10 +4,15 @@
         <rollno>1</rollno>
         <name>Rajesh</name>
         <city>Junagadh</city>
-    <student>
+    </student>
     <student>
         <rollno>2</rollno>
         <name>Ramesh</name>
         <city>Rajkot</city>
+    </student>
     <student>
+        <rollno>3</rollno>
+        <name>Raj</name>
+        <city>Rajkot</city>
+    </student>
 </students>
