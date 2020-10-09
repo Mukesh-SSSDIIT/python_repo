@@ -2,17 +2,35 @@
 <students>
     <student>
         <rollno>1</rollno>
-        <name>Rajesh</name>
+        <name>
+            <firstname>Rajesh</firstname>
+            <lastname>Chauhan</lastname>
+        </name>
         <city>Junagadh</city>
     </student>
     <student>
         <rollno>2</rollno>
-        <name>Ramesh</name>
-        <city>Rajkot</city>
+        <name>
+            <firstname>Ramesh</firstname>
+            <lastname>Irani</lastname>
+        </name>
+        <address>
+            <addressline1>Madhuvan Park Society</addressline1>
+            <city>Rajkot</city>
+            <pincode>360001</pincode>
+        </address>
     </student>
     <student>
         <rollno>3</rollno>
-        <name>Raj</name>
+        <name>
+            <firstname>Raj</firstname>
+            <lastname>Joshi</lastname>
+        </name>
+        <city>Rajkot</city>
+    </student>
+    <student>
+    <rollno>4</rollno>
+        <name>Jayesh</name>
         <city>Rajkot</city>
     </student>
 </students>
