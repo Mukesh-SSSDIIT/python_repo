@@ -1,0 +1,23 @@
+<employees>
+	<employee>
+		<name>
+			<firstname>
+				Amar
+			</firstname>
+			<lastname>
+				Joshi
+			</lastname>
+		</name>
+		<salary type="Monthly">
+			65000
+		</salary>
+	</employee>
+	<employee>
+		<name type="Salesman">
+			Mr. BCDE
+		</name>
+		<salary type="Comissionbases">
+			75000
+		</salary>
+	</employee>
+</employees>
