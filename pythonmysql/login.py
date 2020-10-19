@@ -12,9 +12,11 @@ password = input("Password : ")
 
 mycursor = mydb.cursor()
 
-sql = "select * from users where username = '"+username+"' and password = '" + password + "'"
-print(sql)
-mycursor.execute(sql,multi=True)
+#sql = "select * from users where username = '"+username+"' and password = '" + password + "'"
+sql = "select * from users where username = %s and password = %s"
+args = (username,password)
+#print(sql)
+mycursor.execute(sql,args)
 user =  mycursor.fetchone()
 print(user)
 if user is None:
