@@ -1,7 +1,9 @@
+import tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import Button
 from tkinter import font as tkFont
+
 
 def btn_click():
     msg = messagebox.showinfo( "Hello Python", "Welcome to python")
