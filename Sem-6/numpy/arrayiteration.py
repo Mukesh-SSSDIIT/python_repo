@@ -28,6 +28,14 @@ import numpy as np
 # for x in np.nditer(arr[:, ::4]):
 #   print(x)
 
-arr = np.array([[10, 20, 30],[40,50,60]])
-for idx, x in np.ndenumerate(arr):
-  print(idx, x)
+# arr = np.array([[10, 20, 30],[40,50,60]])
+# for idx, x in np.ndenumerate(arr):
+#   print(idx, x)
+
+import numpy as np  
+a = np.array([[1,2,3,4],[2,4,5,6],[10,20,39,3]])  
+print("Printing array:")  
+print(a);  
+print("Iterating over the array:")  
+for x in np.nditer(a):  
+    print(x,end=' ')  
