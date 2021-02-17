@@ -1,11 +1,12 @@
 import numpy as np
 
-arr = np.array([0,1,30,40,50,70,80,90,100])
-print(arr)
+oldarr = np.array([1,2,3,4,5,6,7,8,9,10])
+print(oldarr)
 
-newarr = arr.copy()
+newarr = oldarr.copy()
 print(newarr)
 
-arr[1] = 100
-print(arr)
+oldarr[1] = 100
+newarr[7] = 700
+print(oldarr)
 print(newarr)
