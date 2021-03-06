@@ -2,9 +2,9 @@ import queue
 import threading
 import time
 # Fifo Queue
-q = queue.Queue()
+# q = queue.Queue()
 # q = queue.LifoQueue()
-# q = queue.PriorityQueue()
+q = queue.PriorityQueue()
 
 def method1():
     for i in range(5):
@@ -27,14 +27,14 @@ t2 = threading.Thread(target=method2)
 t3 = threading.Thread(target=method3)
 t4 = threading.Thread(target=method4)
 
-q.put((1,t1))
-q.put((2,t2))
-q.put((3,t3))
-q.put((4,t4))
+q.put(("adil",t3))
+q.put(("abodh",t2))
+q.put(("Anil",t4))
+q.put(("Zaakash",t1))
 
 while not q.empty():
     item = q.get()
     item[1].start()
     item[1].join()
-
+    # q.task_done()
 print("End of program")
