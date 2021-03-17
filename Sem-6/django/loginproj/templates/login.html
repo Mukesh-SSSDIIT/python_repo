@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Tabs Titles -->
+    <h2 class="active"> Welcome </h2>
+    <!-- Login Form -->
+    <form action="verifylogin" method="POST">
+        {% csrf_token %}
+        {{errormessage}}
+
+        <input type="text" id="username" class="fadeIn second" name="username" placeholder="login">
+        <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="forgetpassword">Forgot Password?</a>
+    </div>
+{% endblock %}
