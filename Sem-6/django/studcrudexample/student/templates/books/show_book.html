@@ -1,12 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Books Page
-</body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Books</title>  
+     {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+    
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+        <tr>  
+            <th>Book ID</th>  
+            <th>Title</th>  
+            <th>Author</th>  
+            <th>ISBN</th>  
+            <th>Publishing Year</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        {% for book in books %}  
+        <tr>  
+            <td>{{ book.book_id }}</td>  
+            <td>{{ book.book_title }}</td>  
+            <td>{{ book.book_author }}</td>  
+            <td>{{ book.book_isbn }}</td>  
+            <td>{{ book.book_publishing_year }}</td>  
+            <td>  
+                <a href="/edit_book/{{ book.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+                <a href="/delete_book/{{ book.id }}">Delete</a>  
+            </td>  
+        </tr>  
+        {% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/add_book" class="btn btn-primary">Add New Record</a></center>  
+</body>  
 </html>
