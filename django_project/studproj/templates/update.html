@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+</head>
+<body>
+    <h1>Update Student</h1>
+    <form method="post" action="update">
+        {% csrf_token %}
+        <input type="hidden" id="id" name="id" 
+                value = "{{stud.id}}"> <br>
+        <input type="text" id="first_name" name="first_name" 
+                value = "{{stud.first_name}}"
+                placeholder="First Name"> <br>
+        <input type="text" id="last_name" name="last_name"
+                value = "{{stud.last_name}}" 
+                placeholder="Last Name"><br>
+        <input type="text" id="age" name="age" 
+                value = "{{stud.age}}"
+                placeholder="Age"><br>
+        <input type="submit" value"Update"></input><br>
+    </form>
+</body>
+</html>

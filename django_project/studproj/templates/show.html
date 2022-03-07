@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            #customers {
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            #customers td, #customers th {
+              border: 1px solid #ddd;
+              padding: 8px;
+            }
+            
+            #customers tr:nth-child(even){background-color: #f2f2f2;}
+            
+            #customers tr:hover {background-color: #ddd;}
+            
+            #customers th {
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #04AA6D;
+              color: white;
+            }
+            </style>
+    </head>
+<body>
+    Stuudent Data
+    <table id="customers">
+    {% for student in students %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.first_name }}</td>
+            <td>{{ student.last_name }}</td>
+            <td>{{ student.age }}</td>
+            <td>
+              <a href="update?studid={{ student.id }}">Update</a>
+            </td>
+            <td>
+              <a href="delete/{{ student.id }}">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <a href="/stud/add">Add Student</a><br>
+</body>
+</html>
