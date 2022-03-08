@@ -1,12 +1,16 @@
+from wsgiref.util import request_uri
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .models import stud
 # Create your views here.
 
 def show(request):
-    students = stud.objects.all()
-    return render(request,'show.html',
+    if request.session.has_key('username'):
+        students = stud.objects.all()
+        return render(request,'show.html',
                             {'students':students})
+    else:
+        return redirect('login')
 
 def add(request):
     if request.method == "POST":
