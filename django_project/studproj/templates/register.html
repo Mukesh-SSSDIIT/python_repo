@@ -7,13 +7,16 @@
     <title>Login</title>
 </head>
 <body>
-    <form method="post" action="login">
+    <form method="post" action="register">
         {% csrf_token %}
+        <h1>Register User </h1>
         {{ invaliduser }} <br>
         <input type="text" id="username" name="username" 
                                 placeholder="User Name"> <br>
         <input type="password" id="password" name="password" 
                                 placeholder="Password"><br>
+        <input type="password" id="retype_password" name="retype_password" 
+                                placeholder="Retype Password"><br>
         <input type="submit"></input><br>
     </form>
 </body>
